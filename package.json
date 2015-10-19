@@ -1,0 +1,19 @@
+{
+  "name": "youdontknowjs1",
+  "version": "1.0.0",
+  "description": "A dumping ground for my You Don't Know JS exercises",
+  "main": ".#ex1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcampbell/youdontknowjs1.git"
+  },
+  "author": "Michael Campbell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcampbell/youdontknowjs1/issues"
+  },
+  "homepage": "https://github.com/mcampbell/youdontknowjs1#readme"
+}
