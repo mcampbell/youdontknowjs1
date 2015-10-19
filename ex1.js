@@ -24,12 +24,34 @@ const accessory_price = 10.99;
 const spending_threshold = 725.00;
 
 var acct_bal = 1000.00;
+var spent = 0.00; 
 
 function format(amt) {
   return '$' + amt.toFixed(2);
 }
 
-function withTax(amt) {
-  return amt * (1 + tax_rate);
+function tax(amt) {
+  return amt * tax_rate;
+}
+
+console.log(`Beginning bank balance is ${format(acct_bal)}`);
+while (spent < acct_bal) {
+  console.log('Buying a phone!');
+  spent += phone_price;
+
+  if (spent < spending_threshold) {
+    console.log('...and goodies.');
+    spent += accessory_price;
+  }
+}
+
+spent += tax(spent);
+
+if (spent < acct_bal) {
+  acct_bal -= spent;
+  console.log(`Bought ${format(spent)} worth of stuff.  Bank account is now ${acct_bal}`);
+
+} else {
+  console.log(`Wanted to spend ${format(spent)}, but couldn't afford it.  =(`);
 }
 
